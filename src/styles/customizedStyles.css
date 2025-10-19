@@ -1,0 +1,12 @@
+.twoSectionContentArea {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+}
+
+.projectListSide, .toDoListSide {
+    text-align: center;;
+}
+
+.projectListSide {
+    background-color: rgb(21,252,38)
+}

@@ -9,8 +9,6 @@ header > h1, footer { /* Direct Child selector */
 
 header, footer {
     height: 10%;
-}
-
-.mainContent {
-    height: 90%;
+    background-color: rgba(77,121,255,1);
+    padding: 10px;
 }

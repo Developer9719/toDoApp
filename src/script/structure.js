@@ -107,9 +107,6 @@ export function customizedHTML() {
     const header = basicElementStructures.siteHeader(`${siteTitle}`);
     new basicElementStructures(header, 'body');
 
-    const div = basicElementStructures.div('Test Content', ['mainContent']);
-    new basicElementStructures(div, 'body');
-
     /* Customized Content */
     customized();
 
