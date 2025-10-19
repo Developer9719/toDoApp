@@ -1,7 +1,6 @@
 import '../styles/customizedStyles.css';
 import { basicElementStructures } from './structure';
-import { Projects } from './projectLogic.js';
-import { saveData } from './persistentAcrossSaves.js';
+import { addProjectClickHandler } from './clickHandlersAndCRUDActions.js';
 
 export function customized() {
     // Creates the 2 column layout
@@ -15,14 +14,4 @@ export function customized() {
     const newProjectsForm = basicElementStructures.form();
     new basicElementStructures(newProjectsForm, '.projectListSide');
     addProjectClickHandler();
-}
-
-function addProjectClickHandler() {
-    const button = document.querySelector('#addProjectButton');
-    button.addEventListener('click', () => {
-        const newName = document.querySelector('#newProjectInput').value;
-        const newProject = Projects(newName, undefined, undefined, undefined, undefined);
-
-        saveData(newProject);
-    });
 }
