@@ -25,7 +25,8 @@ export function loadData() {
             const projectDiv = basicElementStructures.div(undefined, ['projectItem']);
             new basicElementStructures(projectDiv, '.projectListSide');
 
-            const projectName = basicElementStructures.div(projectData.projectName, ['projectName']);
+            let className = projectData.projectName.replace(/\s+/g, '-').toLowerCase();
+            const projectName = basicElementStructures.div(projectData.projectName, [className, 'item']);
             new basicElementStructures(projectName, '.projectItem');
 
             const crud = basicElementStructures.div(undefined, ['crudOperations'], 'crudOperations');

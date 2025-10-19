@@ -95,7 +95,7 @@ export class basicElementStructures {
             return {
                 tag: 'div',
                 content: content,
-                classes: [classList]
+                classes: classList
             }
         }
         
