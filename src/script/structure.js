@@ -67,12 +67,38 @@ export class basicElementStructures {
     }
 
     // Element Blueprints
-    static div(content, classList) {
-        return {
-            tag: 'div',
-            content: content,
-            classes: [classList]
+    static div(content, classList, type = undefined) {
+        if (type == 'crudOperations') {
+            return {
+                tag: 'div',
+                classes: ['crudOperations'],
+                children: [
+                    {
+                        tag: 'a',
+                        attributes: {
+                            href: '#'
+                        },
+                        content: 'Edit',
+                        classes: ['editProject']
+                    },                    
+                    {
+                        tag: 'a',
+                        attributes: {
+                            href: '#'
+                        },
+                        content: 'Delete',
+                        classes: ['deleteProject']
+                    }
+                ]
+            }
+        } else {
+            return {
+                tag: 'div',
+                content: content,
+                classes: [classList]
+            }
         }
+        
     }
 
     static form () {

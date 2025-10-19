@@ -22,8 +22,14 @@ export function loadData() {
 
     if(currentProjects.length > 0) {
         currentProjects.forEach(projectData => {
-            const projectElement = basicElementStructures.div(projectData.projectName, ['projectItem']);
-            new basicElementStructures(projectElement, '.projectListSide');
+            const projectDiv = basicElementStructures.div(undefined, ['projectItem']);
+            new basicElementStructures(projectDiv, '.projectListSide');
+
+            const projectName = basicElementStructures.div(projectData.projectName, ['projectName']);
+            new basicElementStructures(projectName, '.projectItem');
+
+            const crud = basicElementStructures.div(undefined, ['crudOperations'], 'crudOperations');
+            new basicElementStructures(crud, '.projectItem');
         });
     } else {
         console.log('No projects found in storage.');
