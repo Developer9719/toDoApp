@@ -10,3 +10,7 @@
 .projectListSide {
     background-color: rgb(21,252,38)
 }
+
+.projectItem {
+    text-align: left;
+}

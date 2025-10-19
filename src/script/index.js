@@ -1,5 +1,5 @@
-import './pageLoad.js' // Runs the IIFE for intital setup for the site
 import  { customizedHTML } from './structure.js';
+import { loadData } from './persistentAcrossSaves.js';
 
 export const siteTitle = 'Untitled To Do App';
 export let pageTitle = "Home";
@@ -9,3 +9,4 @@ document.querySelector('title').textContent = siteTitle + ' | ' + pageTitle;
 
 // Create the basic and customized page layout
 customizedHTML();
+loadData();

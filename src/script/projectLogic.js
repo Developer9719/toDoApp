@@ -1,13 +1,13 @@
 /** Factory Function:
  *  - Creates and returns objects
  */
-function Projects() { 
+export function Projects(name, description = 'New Project', dueDate = 'NA', priority = 'low', notes = '') { 
     return {
-        projectName,
-        projectDescription,
-        projectDueDate,
-        projectPriority,
-        projectNotes,
+        projectName: name,
+        projectDescription: description,
+        projectDueDate: dueDate,
+        projectPriority: priority,
+        projectNotes: notes,
         toDos: [
 
         ],

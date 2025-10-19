@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "openServer": "npx webpack serve --config webpack.dev.js" 
+    "openServer": "npx webpack serve --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "css-loader": "^7.1.2",
+    "date-fns": "^4.1.0",
     "html-webpack-plugin": "^5.6.4",
     "style-loader": "^4.0.0",
     "webpack-merge": "^6.0.1"

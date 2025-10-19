@@ -3,8 +3,16 @@
     padding: 0;
 }
 
-header > h1, footer { /* Direct Child selector */
+header h1, footer { /* Direct Child selector */
     text-align: center;
+}
+
+header h1 {
+    /* Removes the link styles from the header title */
+    text-decoration: none;
+    text-decoration-line: none;
+    color: white;
+
 }
 
 header, footer {

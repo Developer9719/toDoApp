@@ -75,13 +75,52 @@ export class basicElementStructures {
         }
     }
 
+    static form () {
+        return {
+            tag: 'form',
+            children : [
+                {
+                    tag: 'label',
+                    attributes: {
+                        for: 'newProjectInput'
+                    },
+                    content: 'New Project: '
+                },
+                {
+                    tag: 'input',
+                    attributes: {
+                        placeholder: 'Enter project name',
+                        type: 'text',
+                        id: 'newProjectInput',
+                    }
+                },
+                {
+                    tag: 'button',
+                    attributes: {
+                        type: 'submit',
+                        id: 'addProjectButton'
+                    },
+                    content: 'Add Project'
+                }
+            ]
+        }
+    }
+
     static siteHeader(title) {
         return {
             tag: 'header',
             children: [
                 {
-                    tag: 'h1',
-                    content: title
+                    tag: 'a',
+                    attributes: {
+                        href: './'
+                    },
+                    children: [
+                        {
+                            tag: 'h1',
+                            content: title
+                        }
+                    ]
                 }
             ]
         }
